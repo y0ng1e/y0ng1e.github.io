@@ -1,0 +1,197 @@
+import header.scroll
+date 1/01/1983
+groups index
+
+wideColumns 1
+
+title [中译] Scroll 基础教程
+
+
+endColumns
+startColumns 2
+
+## Scroll 是 Markdown 的可扩展替代品。
+ dateline
+与 Markdown 一样，Scroll 是一种可编译为 HTML 的纯文本语言。
+滚动是最小的，可以帮助您将想法简化为本质。
+Scroll 是可扩展的，可以帮助您使用和构建新的迷你语言来充分发展您的想法。
+
+Scroll 于 2021 年首次亮相，目前版本为 72，大约每 2 周发布 1 次。目前还没有官方规范，但创建规范已在路线图上。
+  链接 roadmap.html 路线图
+
+本教程将引导您了解 Scroll 中的大多数关键字，并教您如何构建自己的 Scroll 关键字。
+
+---
+endSnippet
+
+## 一个 Scroll 文档
+Scroll 文档（或“程序”）是_节点列表_。每个节点都是一条线，每条线都是一个节点。
+如果在一行的开头放置一个空格，则该行将成为前一行的子行。您之前可能在 Python 等语言中见过这种_缩进技巧_。但滚动将其推到了极限。
+如果你掌握了缩进技巧，你就掌握了滚动。但我们有点超前了，让我们从基础开始吧。
+
+---
+
+# 基本节点类型
+## 1. 思想节点（又名“段落”节点）
+让我们从最常见的节点“思想”节点开始。您可以将此节点视为类似于 HTML 中的“p”或“div”标签。 要使用此节点，您可以写出单词“thought”，或使用星号“*”，或者只是开始任何不以关键字开头的文本。 您正在阅读的这一段是使用这些节点之一编写的。 代码是：
+aboveAsCode
+
+## 2. 标题
+滚动中有几种类型的标题。让我们展示3个主要的以及它们生成的内容：
+belowAsCode 3
+标题 这是一个标题
+# 这是一个节标题
+## 这是一个小节标题
+
+## 3. 无序列表
+以下是编写无序列表的方法：
+belowAsCode 2
+- 滚动有列表
+  - 可以嵌套
+
+## 4. 清单
+下面是清单的代码及其渲染版本：
+belowAsCode 2
+[] 完成完整教程
+ [x] 了解清单支持嵌套
+
+## 5. 表格
+使用`table`关键字并包含表的分隔符：
+belowAsCode
+table ,
+ Name,Rank
+ Scroll,#1
+ Markdown,#2
+
+## 6. 图片
+要添加图像，请使用`image`关键字：
+belowAsCode 2
+image https://scroll.pub/blog/screenshot.png
+ caption An image with a caption
+
+## 7. 脚注
+您可以像这样制作脚注：
+belowAsCode 2
+Pau 表示完成^pau
+^pau 夏威夷语
+
+## 8. 仪表板
+如果您正在构建仪表板，您可能需要尝试`dashboard`关键字：
+dashboard
+ #1 Lang
+ 2k Users
+ 300 Stars
+
+## 9. 嵌入 HTML 和 CSS
+html 如果您需要跳转到常规 HTML，请使用 <code>html</code> 关键字。
+aboveAsCode
+
+对于 CSS，请使用`css`关键字：
+belowAsCode 2
+css .green {color: green;}
+This text should be green.
+ class green
+
+---
+
+# 标记文本
+## 粗体、斜体和代码
+格式化文本类似于 Markdown 或 Textile。
+belowAsCode
+以下是如何*粗体*、_斜体_或表示`代码`。
+
+## 链接
+Scroll有着不同的超链接方式。您无需将链接与内容混合在一起，而是将链接_在文本之后_与您希望链接匹配的文本一起放置。例如：
+belowAsCode
+维基百科的链接
+ https://wikipedia.org Wikipedia
+您还可以通过不包含任何要匹配的文本来使整个段落成为链接。
+belowAsCode
+维基百科的链接
+ https://wikipedia.org
+
+## 列
+您可以使用`startColumns [maxNumberOfColumns]`关键字来启动列流，并使用`endColumns`来结束列流。如果您不希望某个部分跨列分隔，请不要在行之间放置换行符。换行符将清除部分。
+
+---
+
+＃ 高级
+## 变量
+使用`replace`关键字来定义变量。变量定义在第一次编译器传递时被解析和删除。
+replace DOMAIN scroll.pub
+Our domain is: *DOMAIN*
+
+## 导入语句
+Scroll文件可以导入其他 Scroll 文件。使用“import”关键字，后跟文件路径，例如：“import header.scroll”
+
+---
+
+# 高级：自定义主题
+标准滚动主题由 CSS 组成，还可能包含建议页面和其他语法扩展。默认 Scroll 主题称为`Gazette`。 下面的清单将引导您创建完整的滚动主题，例如 Gazette。
+
+[] 创建一个 `[yourThemeName].grammar` 文件
+[] 添加 `[yourThemeName]CssParser`
+ - 您可以参考`gazetteTheme.grammar`中的`gazetteCssParser`作为示例。 您的主题可以扩展 `abstractThemeCssParser` 或成为它自己的标签。
+ [] 添加CSS。 Gazette 主题使用 Hakon，一种编译为 CSS 的语言，但您可以自由使用纯 CSS，即使在外部文件中也是如此。
+  [] 添加 CSS 重置。 与任何其他普通网站一样，您可能需要调整浏览器的基本 CSS。
+  [] 为主题中包含的任何自定义关键字添加任何自定义样式。 如果您没有任何自定义关键字，则可以跳过此步骤。
+  [] 为标准 Scroll 关键字添加 CSS。
+
+## 使用自定义主题
+默认情况下，Scroll 发出没有主题的 HTML。要使用任何主题（包括默认的`Gazette`主题），用户只需使用主题提供的关键字，例如`gazetteCss`。
+
+＃ 例子
+## 不使用主题的页面：
+code
+ # This page has no theme
+## A page using a theme:
+code
+ gazetteCss
+ pageHeader
+ * This page uses the Gazette theme.
+ pageFooter
+
+---
+
+# 专家：添加你自己的解析器
+Scroll 基于这样的理论：语言应该适应领域，而不是相反。所以 Scroll 具有内置的可扩展性。
+
+_注意：当前仅使用`npm`包支持自定义解析器。网页编辑器目前*不*支持自定义关键字。_
+
+您可以使用`*Parser`在 Scroll 文档中定义自己的解析器。这些解析器是用`Grammar`语言编写的。
+
+下面是一个简单的例子，它通过使`p`与`*`的工作方式相同来扩展 Scroll：
+
+belowAsCode 2
+pParser
+ extends thoughtParser
+ crux p
+p We can then make paragraphs using `p`.
+
+现在让我们创建一个`hiddenMessage`解析器，单击时会发出警报消息：
+
+belowAsCode 3
+messageParser
+ cruxFromId
+ catchAllCellType stringCell
+hiddenMessageParser
+ extends thoughtParser
+ inScope messageParser
+ cruxFromId
+ javascript
+  compile() {
+    return `<span onclick="alert('${this.get('message')}')">${super.compile()}</span>`
+  }
+hiddenMessage Click me.
+ message Hello world
+
+正如您所看到的，您可以使用少量代码定义新的解析器。您可能还可以看到语法语言功能强大，但也有很多问题。随着语法文档的不断发展，请随时联系我们以获取添加您自己的解析器的帮助。
+
+endColumns
+
+import footer.scroll
+ hidden
+
+
+
+gazetteCss
