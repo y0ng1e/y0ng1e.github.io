@@ -1,4 +1,4 @@
-<script type="text/javascript"src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
 
 ### Lecture Notes of NOAI Training
 
@@ -103,9 +103,9 @@ def draw_loss(losses):
     plt.show()
 ```
 
-$$
+<script type="text/javascript"src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 \text{MSE Expression Format: }\text{MSE}(w,b)=\dfrac{1}{N}\sum^{N}_{i=1}(y_i-(wx_i+b))^2
-$$
+</script>
 
 
 ```python
