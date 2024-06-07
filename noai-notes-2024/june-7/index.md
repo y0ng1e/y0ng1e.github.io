@@ -1,5 +1,6 @@
 ### Lecture Notes of NOAI Training
-##### Day 1, June 7, 2024
+
+##### June 7, Introduction to Data Analysis
 
 #### 1. 基础库
 
