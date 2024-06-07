@@ -1,5 +1,3 @@
-
-
 ### Lecture Notes of NOAI Training
 
 ##### June 7, Introduction to Data Analysis
