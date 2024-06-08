@@ -1,5 +1,6 @@
-## What's up
+## What's up.
 
-Recent updates:
+#### Recent updates
 
-My Notes of NOAI Training: [Lecture Notes](./noai-notes-2024)
+Lecture Notes of NOAI Training 2024: [Lecture Notes](./noai-notes-2024)
+
