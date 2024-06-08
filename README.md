@@ -1,4 +1,5 @@
-Index: [Home](./#) | [About](./about) | [Projects](./projects)
+[Home](./#) | [About](./about) | [Projects](./projects)
+---
 
 ### Recent updates
 
