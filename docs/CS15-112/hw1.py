@@ -1,33 +1,27 @@
-import math
+def roundHalfUp(n):
+    import math
+    return int(math.floor(n+0.5))
 
-def setKthDigit(n, k, d):
-    # Handle negative numbers
-    is_negative = n < 0
-    n = abs(n)
+def colorBlender(rgb1, rgb2, midpoints, n):
+    if n<0 or n>midpoints+1:
+        return None
+    
+    r1=rgb1//1000000
+    g1=(rgb1//1000)%1000
+    b1=rgb1%1000
 
-    # Convert number to string for easy manipulation
-    n_str = str(n)
+    r2=rgb2//1000000
+    g2=(rgb2//1000)%1000
+    b2=rgb2%1000
 
-    # If k is greater than or equal to the length of the string, we need to add leading zeros
-    if k >= len(n_str):
-        n_str = '0' * (k - len(n_str) + 1) + n_str
+    steps=midpoints+1
 
-    # Replace the kth digit
-    n_str = n_str[::-1]  # Reverse the string for right-to-left indexing
-    n_str = n_str[:k] + str(d) + n_str[k+1:]  # Replace the kth digit
-    n_str = n_str[::-1]  # Reverse back to normal
+    rstep=(r2-r1)/steps
+    gstep=(g2-g1)/steps
+    bstep=(b2-b1)/steps
 
-    # Convert back to integer
-    result = int(n_str)
+    rn=roundHalfUp(r1+rstep*n)
+    gn=roundHalfUp(g1+gstep*n)
+    bn=roundHalfUp(b1+bstep*n)
 
-    # Restore the negative sign if necessary
-    if is_negative:
-        result = -result
-
-    return result
-
-# Test cases
-print(setKthDigit(468, 0, 1))  # Output: 461
-print(setKthDigit(468, 1, 1))  # Output: 418
-print(setKthDigit(468, 2, 1))  # Output: 168
-print(setKthDigit(468, 3, 1))  # Output: 1468
+    return rn*1000000+gn*1000+bn
