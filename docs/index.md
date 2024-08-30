@@ -1,3 +1,3 @@
-Hello. I'm currently taking several courses that provide online web pages and resources.
+Hello. I'm currently taking several courses that provide online self-teaching resources.
 
-Check all my progress here.
+Check all my progress and thinking process here.

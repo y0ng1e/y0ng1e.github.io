@@ -1,11 +1,12 @@
 theme:
     icon:
-        logo: material/robot
+        logo: material/rocket
     name: material
     language: en
     font:
       text: Roboto
       code: Roboto Mono
+    font-size: 14
     palette:
         # 切换到亮色
         - media: "(prefers-color-scheme: light)" # 根据系统的颜色模式自动切换
