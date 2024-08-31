@@ -191,7 +191,7 @@ h1 {
     font-size: 19px;
     margin-top: 0px;
     margin-bottom: 5px;
-    border-bottom: 1px solid black
+    border-bottom: 1px solid black;
 }
 .shaded {
     background: #d0d0ff;

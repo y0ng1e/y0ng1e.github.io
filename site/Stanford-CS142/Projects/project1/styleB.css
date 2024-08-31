@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Tahoma;
+    display: flex;
+    position: relative;
+}
+
+.box {
+    width: 100px;
+    height: 150px;
+    background-color: #eeeff2;
+    border-left: 10px dotted #D0D0FF;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: goldenrod;
+    cursor: pointer;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.box:hover {
+    background-color: yellow;
+    color: goldenrod;
+}
+
+.last-box {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-right: 10px; /* Remove the right margin for the last box */
+}
+
+/* Prevent wrapping */
+body {
+    white-space: nowrap;
+}

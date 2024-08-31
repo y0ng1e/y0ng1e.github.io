@@ -1,0 +1,45 @@
+/* General styling for the body to ensure centering */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Tahoma;
+    font-size: 40px;
+}
+
+/* Container to hold the boxes and ensure they are equally spaced vertically */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90vh;
+    width: 100%; /* Ensures container spans full width */
+}
+
+/* General box styling */
+.box {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    border-top: 1px solid #687291;
+}
+
+/* Alternating box colors */
+.box:nth-child(odd) {
+    background-color: #dfe1e7;
+}
+
+.box:nth-child(even) {
+    background-color: #eeeff2;
+}
+
+/* Styling for the last box */
+.box:last-child {
+    background-color: #687291;
+    color: white; /* Ensures text is visible on darker background */
+    border: 4px solid black;
+
+}
