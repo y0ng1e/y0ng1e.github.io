@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="lecture3.html">
+        <link rel="prev" href="lecture4.html">
       
       
-        <link rel="next" href="lecture5.html">
+        <link rel="next" href="../Projects/project1.html">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Lecture 4: Universal Resource Locator (URL) - richard notes</title>
+        <title>Lecture 5: JavaScript Basics - richard notes</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lecture-4-universal-resource-locator-url" class="md-skip">
+        <a href="#lecture-5-javascript-basics" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Lecture 4: Universal Resource Locator (URL)
+              Lecture 5: JavaScript Basics
             
           </span>
         </div>
@@ -582,6 +582,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="lecture4.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 4: Universal Resource Locator (URL)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -594,29 +615,7 @@
         
       
       
-      <a href="lecture4.html" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Lecture 4: Universal Resource Locator (URL)
-  </span>
-  
-
-      </a>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="lecture5.html" class="md-nav__link">
+      <a href="lecture5.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -625,6 +624,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -754,55 +754,95 @@
                   
 
 
-<h1 id="lecture-4-universal-resource-locator-url">Lecture 4: Universal Resource Locator (URL)<a class="headerlink" href="#lecture-4-universal-resource-locator-url" title="Permanent link">&para;</a></h1>
+<h1 id="lecture-5-javascript-basics">Lecture 5: JavaScript Basics<a class="headerlink" href="#lecture-5-javascript-basics" title="Permanent link">&para;</a></h1>
+<p>What is JS?</p>
 <ul>
-<li>hypertext: text with links to other text</li>
+<li>dynamic, untyped, interpreted language</li>
+<li>prototype-based</li>
+<li>object-oriented</li>
+<li>has an API</li>
 </ul>
-<div class="language-html highlight"><span class="filename">HTML</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><a href="#__codelineno-0-1"><span class="linenos" data-linenos="1 "></span></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://en.wikipedia.org/wiki/URL&quot;</span><span class="p">&gt;</span>URL<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<p>variable scoping</p>
+<div class="language-js highlight"><span class="filename">JavaScript</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><a href="#__codelineno-0-1"><span class="linenos" data-linenos="1 "></span></a><span class="kd">var</span><span class="w"> </span><span class="nx">globalVar</span><span class="p">;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><a href="#__codelineno-0-2"><span class="linenos" data-linenos="2 "></span></a><span class="kd">function</span><span class="w"> </span><span class="nx">foo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><a href="#__codelineno-0-3"><span class="linenos" data-linenos="3 "></span></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">localVar</span><span class="p">;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><a href="#__codelineno-0-4"><span class="linenos" data-linenos="4 "></span></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">globalVar</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><a href="#__codelineno-0-5"><span class="linenos" data-linenos="5 "></span></a><span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">localVar2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><a href="#__codelineno-0-6"><span class="linenos" data-linenos="6 "></span></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><a href="#__codelineno-0-7"><span class="linenos" data-linenos="7 "></span></a><span class="w">    </span><span class="c1">// localVar2 is valid here</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><a href="#__codelineno-0-8"><span class="linenos" data-linenos="8 "></span></a><span class="p">}</span>
 </code></pre></div>
-<p>parts of an URL: <code>http://www.company.com:80/a/b/c.html?user=Alice&amp;year=2008#p2</code></p>
-<ol>
-<li>scheme (<code>http://</code>): the protocal</li>
-<li>host name (<code>www. ... .com</code>): name of the machine to connect to</li>
-<li>server's host number (<code>80</code>): allows multiple servers to run on the same machine</li>
-<li>hierarchical portion (<code>/a/b/c.html</code>): find content</li>
-<li>query parameters (<code>?user=Alice&amp;year=2008</code>): provides additional parameters</li>
-<li>fragment (<code>#p2</code>): browser scroll page to fragment</li>
-</ol>
-<p>URL schemes</p>
-<ol>
-<li><code>http</code>: most common scheme, HTTP Protocal</li>
-<li><code>https</code>: similar to <code>http</code></li>
-<li><code>file</code>: read a file from local</li>
-<li><code>websocket</code>: create a TCP connection</li>
-<li><code>mailto</code>: open an email program and compose a message</li>
-</ol>
-<p>query parameters</p>
+<p>var scoping confusions</p>
+<div class="language-js highlight"><span class="filename">JavaScript</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><a href="#__codelineno-1-1"><span class="linenos" data-linenos="1 "></span></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Val is:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">val</span><span class="p">);</span><span class="w"> </span><span class="c1">//Syntax error</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><a href="#__codelineno-1-2"><span class="linenos" data-linenos="2 "></span></a><span class="c1">//...</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><a href="#__codelineno-1-3"><span class="linenos" data-linenos="3 "></span></a><span class="k">for</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><a href="#__codelineno-1-4"><span class="linenos" data-linenos="4 "></span></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">val</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;different string&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Hoisted to func start, but works</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><a href="#__codelineno-1-5"><span class="linenos" data-linenos="5 "></span></a><span class="p">}</span>
+</code></pre></div>
+<p><code>number</code> type</p>
 <ul>
-<li>traditionally used as: <code>?order=</code>, <code>?query=</code>, <code>?theme=</code>.</li>
+<li><span class="arithmatex">\(\text{MAX_INT}=(2^{53}-1)=9007199254740991\)</span></li>
+<li><span class="arithmatex">\(1/0=\text{Infinity}\)</span></li>
+<li><span class="arithmatex">\(\text{Math.sqrt(-1)}=\text{NaN}\)</span></li>
 </ul>
-<p>links</p>
-<ul>
-<li>implemented with the <code>&lt;a&gt;</code> tag: <code>&lt;a href="http://www.company.com/news/2009.html"&gt;2009 News&lt;/a&gt;</code></li>
-</ul>
-<p>URLs</p>
-<ol>
-<li>full URL: <code>&lt;a href="http://www.xyz.com/news/2009.html"&gt;2009 News&lt;/a&gt;</code></li>
-<li>absolute URL: <code>&lt;a href="/stock/quote.html"&gt;</code></li>
-<li>relative URL: <code>&lt;a href="2008/March.html"&gt;</code></li>
-<li>define an anchor point: <code>&lt;a name="sec3"&gt;</code></li>
-<li>move to an anchor point: <code>&lt;a href="#sec3"&gt;</code></li>
-</ol>
-<p>uses of URLs</p>
-<ol>
-<li>load images: <code>&lt;img src="..." /&gt;</code></li>
-<li>load stylesheets: <code>&lt;link rel="stylesheet" type="text/css" href="..."&gt;</code></li>
-<li>embed a page: <code>&lt;iframe src="http://www.google.com"&gt;</code></li>
-</ol>
-<p>URL encoding</p>
-<ol>
-<li>all punctuations must be replaced by <code>%xx</code>, where <code>xx</code> is a hexadecimal value of the character.</li>
-</ol>
+<div class="admonition warning">
+<p class="admonition-title">special cases</p>
+<p><code>(0.1 + 0.2) == 0.3</code> is <code>false</code></p>
+<p>Bitwise operators (e.g. <code>~, &amp;, |, ^, &gt;&gt;, &lt;&lt;, &gt;&gt;&gt;</code>) are 32bit.</p>
+</div>
+<p>properties</p>
+<div class="language-js highlight"><span class="filename">JavaScript</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><a href="#__codelineno-2-1"><span class="linenos" data-linenos="1 "></span></a><span class="kd">let</span><span class="w"> </span><span class="nx">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{};</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><a href="#__codelineno-2-2"><span class="linenos" data-linenos="2 "></span></a><span class="kd">let</span><span class="w"> </span><span class="nx">bar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">age</span><span class="o">:</span><span class="w"> </span><span class="mf">23</span><span class="p">,</span><span class="w"> </span><span class="nx">state</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;California&quot;</span><span class="p">};</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><a href="#__codelineno-2-3"><span class="linenos" data-linenos="3 "></span></a><span class="kd">let</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;empty&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;---&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;dashes&quot;</span><span class="p">};</span>
+</code></pre></div>
+<div class="language-js highlight"><span class="filename">JavaScript</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><a href="#__codelineno-3-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="c1">//add</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><a href="#__codelineno-3-2"><span class="linenos" data-linenos=" 2 "></span></a><span class="kd">let</span><span class="w"> </span><span class="nx">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{};</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><a href="#__codelineno-3-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="nx">foo</span><span class="p">.</span><span class="nx">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Fred&quot;</span><span class="p">;</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><a href="#__codelineno-3-4"><span class="linenos" data-linenos=" 4 "></span></a>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><a href="#__codelineno-3-5"><span class="linenos" data-linenos=" 5 "></span></a><span class="c1">//remove</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><a href="#__codelineno-3-6"><span class="linenos" data-linenos=" 6 "></span></a><span class="kd">let</span><span class="w"> </span><span class="nx">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Fred&quot;</span><span class="p">};</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><a href="#__codelineno-3-7"><span class="linenos" data-linenos=" 7 "></span></a><span class="ow">delete</span><span class="w"> </span><span class="nx">foo</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><a href="#__codelineno-3-8"><span class="linenos" data-linenos=" 8 "></span></a>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><a href="#__codelineno-3-9"><span class="linenos" data-linenos=" 9 "></span></a><span class="c1">//enumerate</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><a href="#__codelineno-3-10"><span class="linenos" data-linenos="10 "></span></a><span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">({</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">age</span><span class="o">:</span><span class="w"> </span><span class="mf">23</span><span class="p">})</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;age&quot;</span><span class="p">]</span>
+</code></pre></div>
+<p>array</p>
+<div class="language-js highlight"><span class="filename">JavaScript</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><a href="#__codelineno-4-1"><span class="linenos" data-linenos="1 "></span></a><span class="kd">let</span><span class="w"> </span><span class="nx">anArr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="mf">2</span><span class="p">,</span><span class="mf">3</span><span class="p">];</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><a href="#__codelineno-4-2"><span class="linenos" data-linenos="2 "></span></a><span class="nx">anArr</span><span class="p">[</span><span class="mf">5</span><span class="p">]</span><span class="o">=</span><span class="s1">&#39;FooBar&#39;</span><span class="p">;</span><span class="w"> </span><span class="c1">//[1,2,3,,,&#39;FooBar&#39;]</span>
+</code></pre></div>
+<p>dates</p>
+<div class="language-js highlight"><span class="filename">JavaScript</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><a href="#__codelineno-5-1"><span class="linenos" data-linenos="1 "></span></a><span class="kd">let</span><span class="w"> </span><span class="nx">date</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">();</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><a href="#__codelineno-5-2"><span class="linenos" data-linenos="2 "></span></a><span class="c1">//date.valueOf() = 1452359316314</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><a href="#__codelineno-5-3"><span class="linenos" data-linenos="3 "></span></a><span class="c1">//date.toISOString() = &#39;2016-01-09T17:08:36.314Z&#39;</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><a href="#__codelineno-5-4"><span class="linenos" data-linenos="4 "></span></a><span class="c1">//date.toLocaleString() = &#39;1/9/2016, 9:08:36 AM&#39;</span>
+</code></pre></div>
+<p>exceptions - try/catch</p>
+<div class="language-js highlight"><span class="filename">JavaScript</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><a href="#__codelineno-6-1"><span class="linenos" data-linenos="1 "></span></a><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><a href="#__codelineno-6-2"><span class="linenos" data-linenos="2 "></span></a><span class="w">    </span><span class="nx">nonExistentFunction</span><span class="p">();</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><a href="#__codelineno-6-3"><span class="linenos" data-linenos="3 "></span></a><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// typeof err &#39;object&#39;</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><a href="#__codelineno-6-4"><span class="linenos" data-linenos="4 "></span></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Error call func&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><a href="#__codelineno-6-5"><span class="linenos" data-linenos="5 "></span></a><span class="p">}</span>
+</code></pre></div>
+<p>exceptions - throw/finally</p>
+<div class="language-js highlight"><span class="filename">JavaScript</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><a href="#__codelineno-7-1"><span class="linenos" data-linenos="1 "></span></a><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><a href="#__codelineno-7-2"><span class="linenos" data-linenos="2 "></span></a><span class="w">    </span><span class="k">throw</span><span class="w"> </span><span class="s2">&quot;Help!&quot;</span><span class="p">;</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><a href="#__codelineno-7-3"><span class="linenos" data-linenos="3 "></span></a><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">errstr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// errstr === &quot;Help!&quot;</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><a href="#__codelineno-7-4"><span class="linenos" data-linenos="4 "></span></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Got exception&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">errstr</span><span class="p">);</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><a href="#__codelineno-7-5"><span class="linenos" data-linenos="5 "></span></a><span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><a href="#__codelineno-7-6"><span class="linenos" data-linenos="6 "></span></a><span class="w">    </span><span class="c1">// This block is executed after try/catch</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><a href="#__codelineno-7-7"><span class="linenos" data-linenos="7 "></span></a><span class="p">}</span>
+</code></pre></div>
+<p>js in web page</p>
+<div class="language-html highlight"><span class="filename">HTML</span><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><a href="#__codelineno-8-1"><span class="linenos" data-linenos="1 "></span></a><span class="cm">&lt;!-- file --&gt;</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><a href="#__codelineno-8-2"><span class="linenos" data-linenos="2 "></span></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;code.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><a href="#__codelineno-8-3"><span class="linenos" data-linenos="3 "></span></a>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><a href="#__codelineno-8-4"><span class="linenos" data-linenos="4 "></span></a><span class="cm">&lt;!-- inline --&gt;</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><a href="#__codelineno-8-5"><span class="linenos" data-linenos="5 "></span></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><a href="#__codelineno-8-6"><span class="linenos" data-linenos="6 "></span></a><span class="c1">//&lt;![CDATA[</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a><a href="#__codelineno-8-7"><span class="linenos" data-linenos="7 "></span></a><span class="w">    </span><span class="c1">//Javascript goes here...</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a><a href="#__codelineno-8-8"><span class="linenos" data-linenos="8 "></span></a><span class="c1">//]]&gt;</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a><a href="#__codelineno-8-9"><span class="linenos" data-linenos="9 "></span></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
 
 
 
@@ -838,7 +878,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="lecture3.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Lecture 3: Cascading Style Sheets (CSS)">
+          <a href="lecture4.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Lecture 4: Universal Resource Locator (URL)">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -848,20 +888,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Lecture 3: Cascading Style Sheets (CSS)
+                Lecture 4: Universal Resource Locator (URL)
               </div>
             </div>
           </a>
         
         
           
-          <a href="lecture5.html" class="md-footer__link md-footer__link--next" aria-label="Next: Lecture 5: JavaScript Basics">
+          <a href="../Projects/project1.html" class="md-footer__link md-footer__link--next" aria-label="Next: Project 1: HTML and CSS">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Lecture 5: JavaScript Basics
+                Project 1: HTML and CSS
               </div>
             </div>
             <div class="md-footer__button md-icon">
