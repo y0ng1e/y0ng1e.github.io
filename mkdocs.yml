@@ -39,6 +39,7 @@ theme:
         - search.share # 搜索结果分享
         - navigation.footer # 页脚提示下一章
         - content.code.copy # 代码段上的赋值按钮
+        - navigation.indexes
 
 markdown_extensions:
     - pymdownx.highlight:  # 代码高亮
@@ -118,6 +119,20 @@ site_description: "misc."
 plugins:
     - search # 搜索插件
     - offline # 离线本地搜索，和navigation.instant不能同时启用
+    - blog:
+        blog_dir: blog
+        post_date_format: medium
+        blog_toc: true
+        #archive: false
+        post_excerpt: required
+        post_url_format: "{slug}"
+        post_slugify: !!python/object/apply:pymdownx.slugs.slugify
+          kwds:
+            case: lower
+        post_slugify_separator: _
+        archive_date_format: MMM yyyy
+        archive_toc: true
+        authors: false
 
 extra:
     generator: false
